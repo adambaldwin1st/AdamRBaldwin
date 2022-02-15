@@ -11296,8 +11296,8 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
 }
 
 .hero.is-link {
-  background-color: #485fc7;
-  color: #fff;
+  background-color: white;
+  color: black;
 }
 
 .hero.is-link a:not(.button):not(.dropdown-item):not(.tag):not(.pagination-link.is-current),
@@ -11306,7 +11306,7 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
 }
 
 .hero.is-link .title {
-  color: #fff;
+  color: black;
 }
 
 .hero.is-link .subtitle {
@@ -11315,7 +11315,7 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
 
 .hero.is-link .subtitle a:not(.button),
 .hero.is-link .subtitle strong {
-  color: #fff;
+  color: black;
 }
 
 @media screen and (max-width: 1023px) {
@@ -11375,7 +11375,7 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
 }
 
 .hero.is-info {
-  background-color: #3e8ed0;
+  background-color: #434242;
   color: #fff;
 }
 
@@ -11389,7 +11389,7 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
 }
 
 .hero.is-info .subtitle {
-  color: rgba(255, 255, 255, 0.9);
+  color: white;
 }
 
 .hero.is-info .subtitle a:not(.button),
@@ -11454,7 +11454,7 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
 }
 
 .hero.is-success {
-  background-color: #48c78e;
+  background-color: #fff;
   color: #fff;
 }
 
@@ -11464,7 +11464,7 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
 }
 
 .hero.is-success .title {
-  color: #fff;
+  color: black;
 }
 
 .hero.is-success .subtitle {
@@ -11533,7 +11533,7 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
 }
 
 .hero.is-warning {
-  background-color: #ffe08a;
+  background-color: #f2efe1;
   color: rgba(0, 0, 0, 0.7);
 }
 
@@ -11807,5 +11807,22 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
 .footer {
   background-color: #fafafa;
   padding: 3rem 1.5rem 6rem;
+}
+
+hr.thin {
+height: 1px;
+border: 0;
+color: #333;
+background-color: #333;
+opacity: 0.2;
+margin-bottom: 0px;
+}
+hr.thin-white {
+height: 1px;
+border: 0;
+color: #fff;
+background-color: #fff;
+opacity: 0.2;
+margin-bottom: 0px;
 }
 /*# sourceMappingURL=bulma.css.map */
