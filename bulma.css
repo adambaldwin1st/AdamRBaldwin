@@ -11611,12 +11611,29 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
   }
 }
 
+
+@media screen and (max-device-width: 600px) and (orientation: portrait) {
 .hero.is-danger {
   background-image: url("images/Pylons.jpg");
-  background-position: center;
+  background-repeat: no-repeat;
+  background-position: right;
+  background-attachment: fixed;
   background-size: cover;
   color: #fff;
 }
+}
+
+@media screen and (min-width: 600px) {
+.hero.is-danger {
+  background-image: url("images/Pylons.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: fixed;
+  background-size: cover;
+  color: #fff;
+}
+}
+
 
 .hero.is-danger a:not(.button):not(.dropdown-item):not(.tag):not(.pagination-link.is-current),
 .hero.is-danger strong {
