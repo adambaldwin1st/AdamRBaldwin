@@ -11612,7 +11612,9 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
 }
 
 .hero.is-danger {
-  background-color: #f14668;
+  background-image: url("images/Pylons.jpg");
+  background-position: center;
+  background-size: cover;
   color: #fff;
 }
 
