@@ -11611,7 +11611,6 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
   }
 }
 
-
 @media screen and (max-device-width: 600px) and (orientation: portrait) {
 .hero.is-danger {
   background-image: url("images/Pylons.jpg");
@@ -11700,6 +11699,101 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
 }
 
 .hero.is-danger.is-bold {
+  background-image: linear-gradient(141deg, #fa0a62 0%, #f14668 71%, #f7595f 100%);
+}
+
+@media screen and (max-width: 768px) {
+  .hero.is-danger.is-bold .navbar-menu {
+    background-image: linear-gradient(141deg, #fa0a62 0%, #f14668 71%, #f7595f 100%);
+  }
+}
+
+@media screen and (max-device-width: 600px) and (orientation: portrait) {
+.hero.is-wood {
+  background-image: url("images/wood-background--dark-wooden-background.jpeg");
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: cover;
+  color: #fff;
+}
+}
+
+@media screen and (min-width: 600px) {
+.hero.is-wood {
+  background-image: url("images/wood-background--dark-wooden-background.jpeg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+  color: #fff;
+}
+}
+
+
+.hero.is-wood a:not(.button):not(.dropdown-item):not(.tag):not(.pagination-link.is-current),
+.hero.is-wood strong {
+  color: inherit;
+}
+
+.hero.is-wood .title {
+  color: #fff;
+}
+
+.hero.is-wood .subtitle {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.hero.is-wood .subtitle a:not(.button),
+.hero.is-wood .subtitle strong {
+  color: #fff;
+}
+
+@media screen and (max-width: 1023px) {
+  .hero.is-wood .navbar-menu {
+    background-color: #f14668;
+  }
+}
+
+.hero.is-wood .navbar-item,
+.hero.is-wood .navbar-link {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.hero.is-wood a.navbar-item:hover, .hero.is-wood a.navbar-item.is-active,
+.hero.is-wood .navbar-link:hover,
+.hero.is-wood .navbar-link.is-active {
+  background-color: #ef2e55;
+  color: #fff;
+}
+
+.hero.is-wood .tabs a {
+  color: #fff;
+  opacity: 0.9;
+}
+
+.hero.is-wood .tabs a:hover {
+  opacity: 1;
+}
+
+.hero.is-wood .tabs li.is-active a {
+  color: #f14668 !important;
+  opacity: 1;
+}
+
+.hero.is-wood .tabs.is-boxed a, .hero.is-wood .tabs.is-toggle a {
+  color: #fff;
+}
+
+.hero.is-wood .tabs.is-boxed a:hover, .hero.is-wood .tabs.is-toggle a:hover {
+  background-color: rgba(10, 10, 10, 0.1);
+}
+
+.hero.is-wood .tabs.is-boxed li.is-active a, .hero.is-wood .tabs.is-boxed li.is-active a:hover, .hero.is-wood .tabs.is-toggle li.is-active a, .hero.is-wood .tabs.is-toggle li.is-active a:hover {
+  background-color: #fff;
+  border-color: #fff;
+  color: #f14668;
+}
+
+.hero.is-wood.is-bold {
   background-image: linear-gradient(141deg, #fa0a62 0%, #f14668 71%, #f7595f 100%);
 }
 
@@ -11845,3 +11939,73 @@ opacity: 0.2;
 margin-bottom: 0px;
 }
 /*# sourceMappingURL=bulma.css.map */
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
