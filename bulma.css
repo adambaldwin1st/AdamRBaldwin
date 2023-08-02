@@ -11889,6 +11889,13 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
   flex-shrink: 0;
 }
 
+.hero-header {
+  height: 20%; /* Adjust this value to occupy the desired percentage of the section */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
 .hero-body {
   flex-grow: 1;
   flex-shrink: 0;
