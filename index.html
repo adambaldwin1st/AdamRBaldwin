@@ -1,36 +1,61 @@
 <!DOCTYPE html>
 <html>
+
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adam R. Baldwin</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="bulma.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Get the "navbar-burger" element
+            const navbarBurgers = document.querySelectorAll('.navbar-burger');
+
+            // Check if there are any navbar burgers
+            if (navbarBurgers.length > 0) {
+                // Add a click event on each of them
+                navbarBurgers.forEach(el => {
+                    el.addEventListener('click', () => {
+                        // Get the target from the "data-target" attribute
+                        const target = document.getElementById(el.dataset.target);
+
+                        // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+                        el.classList.toggle('is-active');
+                        target.classList.toggle('is-active');
+                    });
+                });
+            }
+        });
+    </script>
+
 </head>
+
 <body>
-<nav class="navbar is-light" role="navigation" aria-label="main navigation">
-    <div class="navbar-brand">
-        <a class="navbar-item" href="https://adamrbaldwin.com">
-            <img src="images/ARBLogo.png" alt="Adam R. Baldwin">
-        </a>
-        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-        </a>
-    </div>
-    <div id="navbarBasicExample" class="navbar-menu">
-        <div class="navbar-start">
-            <a class="navbar-item" href="#home">
-                Home
+<header>
+    <nav class="navbar is-light">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="https://adamrbaldwin.com">
+                <img src="images/ARBLogo.png" alt="Adam R. Baldwin">
             </a>
-            <a class="navbar-item" href="https://www.instagram.com/the_creations_of_adam/">
-                Woodworking
+            <!-- Burger button for mobile view -->
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMenu">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
             </a>
         </div>
-    </div>
-</nav>
+        <div id="navbarMenu" class="navbar-menu">
+            <div class="navbar-start">
+                <a class="navbar-item" href="#home">Home</a>
+                <a class="navbar-item" href="https://www.instagram.com/the_creations_of_adam/">Woodworking</a>
+            </div>
+        </div>
+    </nav>
+</header>
+
 
 <section class="hero is-danger is-fullheight-with-navbar">
     <div class="mt-6 container hero-header">
@@ -41,34 +66,39 @@
 <!-- Information section -->
 <section class="hero is-fullheight is-success">
     <div class="hero-body">
-        <div class="container is-max-desktop">
-            <h1 class="mb-6 title is-1 is-italic has-text-weight-light has-text-centered">My name is Adam Baldwin</h1>
-            <h1 class="subtitle is-4 has-text-weight-light has-text-centered has-text-black is-italic">I am a software developer. Hi!</h1>
+        <div class="container">
+            <h1 class="mb-6 title is-1 is-italic has-text-weight-heavy has-text-centered">My name is Adam Baldwin</h1>
+            <h1 class="subtitle is-4 has-text-weight-light has-text-centered has-text-black is-italic">I like to make cool stuff!</h1>
             <hr class="mb-0 thin">
-            <div class="columns mt-4">
-                <div class="column">
-                    <h1 class="has-text-link-dark title is-2 has-text-weight-light">About Me</h1>
-                    <p class="has-text-black is-size-5 has-text-weight-light">I am a versatile software developer with
-                        experience in both web development and local application development. My number one goal is to
-                        consistently deliver work that I am genuinely proud of. I prioritize reliability, consistency,
-                        and effective teamwork to succeed.</p>
+            <div class="box columns is-variable is-8 mt-4 is-multiline is-vcentered is-flex is-align-items-stretch">
+                <div class="column is-full-mobile is-one-third-desktop">
+                    <h1 class="has-text-link-dark title is-2 has-text-weight-heavy">About Me</h1>
+                    <p class="has-text-black is-size-5 has-text-weight-light">
+                        I am a versatile software developer with experience in both web development and local
+                        application development. My number one goal is to consistently deliver work that I am genuinely
+                        proud of. I prioritize reliability, consistency, and effective teamwork to succeed.
+                    </p>
                 </div>
-                <div class="column">
-                    <figure class="mt-6 image is-square">
-                        <img src="images/old_profile.png" alt="Profile Picture">
+                <div class="column is-full-mobile is-one-third-desktop has-text-centered">
+                    <figure class="image is-256x256 is-inline-block">
+                        <img class="is-rounded" src="images/CharlotteProfilePic.jpeg" alt="Profile Picture">
                     </figure>
                 </div>
-                <div class="column">
-                    <h1 class="has-text-link-dark title is-2 has-text-weight-light">Hobbies</h1>
-                    <p class="has-text-black is-size-5 has-text-weight-light">I find joy in creating things, whether
-                        it's through woodworking, 3D printing, or exploring graphic design. Outside of that, you'll
-                        often find me enjoying a game of soccer or spending quality time with my dog, Rosie.</p>
+                <div class="column is-full-mobile is-one-third-desktop">
+                    <h1 class="has-text-link-dark title is-2 has-text-weight-heavy">Hobbies</h1>
+                    <p class="has-text-black is-size-5 has-text-weight-light">
+                        I find joy in creating things, whether it's through woodworking, 3D printing, or exploring
+                        graphic design. Outside of that, you'll often find me enjoying a game of soccer or spending
+                        quality time with my dog, Rosie.
+                    </p>
                 </div>
             </div>
             <hr class="mb-0 thin">
         </div>
     </div>
 </section>
+
+
 
 <!-- Experience Section -->
 <section class="hero is-fullheight is-warning">
