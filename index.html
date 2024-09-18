@@ -12,6 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const burger = document.querySelector('.navbar-burger');
@@ -69,9 +70,18 @@
 </section>
 
 <section class="section" id="about">
-    <div class="container is-size-4">
-        <p>I’m a self-taught software developer. I am driven by curiosity and a passion for creating work I can be proud of.</p>
-        <p>Check out my <a href="#projects" class="has-text-primary-light">side projects</a> below!</p>
+    <div class="columns is-vcentered is-mobile is-multiline">
+        <div class="column is-full-mobile is-half-tablet is-narrow has-text-centered-mobile">
+            <figure class="image is-inline-block">
+                <img class="is-rounded profile-pic" src="images/CharlotteProfilePic.jpeg" alt="Profile Picture">
+            </figure>
+        </div>
+        <div class="column is-full-mobile is-half-tablet">
+            <div class="content is-size-4">
+                <p>I’m a self-taught software developer. I am driven by curiosity and a passion for creating work I can be proud of.</p>
+                <p>Check out my <a href="#projects" class="has-text-primary-light">side projects</a> below!</p>
+            </div>
+        </div>
     </div>
 </section>
 
@@ -94,9 +104,9 @@
                             visualization, and deeper insights tailored for fantasy football enthusiasts,
                             making it an essential resource for managing and optimizing FPL teams.</p>
                         <div class="buttons">
-                            <a href="#" class="button is-success">Java</a>
-                            <a href="#" class="button is-info">Typescript</a>
-                            <a href="#" class="button is-link">React</a>
+                            <a class="button is-success">Java</a>
+                            <a class="button is-info">Typescript</a>
+                            <a class="button is-link">React</a>
                         </div>
                     </div>
                 </div>
@@ -116,9 +126,32 @@
                             to guide the game while participants answer questions in real-time, making it an engaging
                             and accessible trivia experience for all players.</p>
                         <div class="buttons">
-                            <a href="#" class="button is-success">Java</a>
-                            <a href="#" class="button is-info">Typescript</a>
-                            <a href="#" class="button is-link">React</a>
+                            <a class="button is-success">Java</a>
+                            <a class="button is-info">Typescript</a>
+                            <a class="button is-link">React</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="project-box">
+            <div class="columns">
+                <div class="column is is-one-third">
+                    <img src="images/premier-league-logo-purple-background.png" alt="Project Image">
+                </div>
+                <div class="column is is-two-thirds">
+                    <div class="content">
+                        <h3 class="title is-4">FPL Ultimate</h3>
+                        <p>FPLUltimate began as a website that initially scraped data from the official
+                            Fantasy Premier League (FPL) website to present player stats and other relevant
+                            information in a more organized and user-friendly way. Over time, it evolved into a
+                            standalone project, expanding its features to include custom tools, enhanced data
+                            visualization, and deeper insights tailored for fantasy football enthusiasts,
+                            making it an essential resource for managing and optimizing FPL teams.</p>
+                        <div class="buttons">
+                            <a class="button is-success">Java</a>
+                            <a class="button is-info">Typescript</a>
+                            <a class="button is-link">React</a>
                         </div>
                     </div>
                 </div>
@@ -128,12 +161,28 @@
 </section>
 
 <section class="section" id="contact">
-    <div class="container">
-        <h2 class="title is-2">Contact</h2>
-        <p>Feel free to reach out to me via email or through my LinkedIn profile:</p>
-        <p><a href="mailto:adam@example.com">adam@example.com</a></p>
-        <p><a href="https://www.linkedin.com/in/adamrbaldwin/">LinkedIn</a></p>
-    </div>
+    <h2 class="title is-2 has-text-centered">Contact</h2>
+    <div class="underline-box-light"></div>
+    <nav class="level">
+        <div class="level-item has-text-centered">
+            <div>
+                <p class="heading">abaldwinva98@gmail.com</p>
+                <span class="material-symbols-outlined">mail</span>
+            </div>
+        </div>
+        <div class="level-item has-text-centered">
+            <div>
+                <p class="heading">Following</p>
+                <p class="title">123</p>
+            </div>
+        </div>
+        <div class="level-item has-text-centered">
+            <div>
+                <p class="heading">Followers</p>
+                <p class="title">456K</p>
+            </div>
+        </div>
+    </nav>
 </section>
 
 <footer class="footer">
