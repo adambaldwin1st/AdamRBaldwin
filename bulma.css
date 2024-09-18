@@ -3176,6 +3176,17 @@ a.tag:hover {
   margin-top: -1.25rem;
 }
 
+.title.is-top-title {
+  font-size: 4rem;
+  padding-top: 5rem;
+}
+
+@media screen and (max-width: 768px) {
+  .title.is-top-title {
+    font-size: 8vw;
+  }
+}
+
 .title.is-1 {
   font-size: 3rem;
 }
@@ -5504,63 +5515,118 @@ button.dropdown-item.is-active {
 }
 
 .navbar.is-light {
-  background-color: whitesmoke;
   color: rgba(0, 0, 0, 0.7);
 }
 
+/* Navbar brand and link colors */
 .navbar.is-light .navbar-brand > .navbar-item,
 .navbar.is-light .navbar-brand .navbar-link {
   color: rgba(0, 0, 0, 0.7);
+  position: relative; /* Needed for the underline effect */
+  transition: color 0.3s ease, background-color 0.3s ease; /* Smooth color and background transition */
+  background-color: transparent; /* Ensure no background color */
 }
 
-.navbar.is-light .navbar-brand > a.navbar-item:focus, .navbar.is-light .navbar-brand > a.navbar-item:hover, .navbar.is-light .navbar-brand > a.navbar-item.is-active,
-.navbar.is-light .navbar-brand .navbar-link:focus,
+.navbar.is-light .navbar-brand > a.navbar-item:hover,
+.navbar.is-light .navbar-brand > a.navbar-item.is-active,
 .navbar.is-light .navbar-brand .navbar-link:hover,
 .navbar.is-light .navbar-brand .navbar-link.is-active {
-  background-color: #e8e8e8;
-  color: rgba(0, 0, 0, 0.7);
+  color: #08c8cc; /* Change to #08c8cc on hover or active */
+  background-color: transparent; /* Ensure no background color on hover */
 }
 
-.navbar.is-light .navbar-brand .navbar-link::after {
-  border-color: rgba(0, 0, 0, 0.7);
+/* Underline effect */
+.navbar.is-light > a.navbar-item::after,
+.navbar.is-light .navbar-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px; /* Thickness of the underline */
+  left: 0;
+  bottom: -3px; /* Position the underline below the text */
+  background-color: #08c8cc; /* Use #08c8cc for the underline */
+  transition: width 0.3s ease; /* Animate the underline width */
 }
 
+.navbar.is-light .navbar-brand > a.navbar-item:hover::after,
+.navbar.is-light .navbar-brand .navbar-link:hover::after {
+  width: 100%; /* Expand the underline on hover */
+}
+
+/* Burger color */
 .navbar.is-light .navbar-burger {
   color: rgba(0, 0, 0, 0.7);
 }
 
+/* Ensure proper styling for burger menu items */
+.navbar.is-light .navbar-menu {
+  background-color: white; /* Set background color for mobile menu */
+}
+
+.navbar.is-light .navbar-menu .navbar-item {
+  color: rgba(0, 0, 0, 0.7); /* Color for menu items */
+}
+
+.navbar.is-light .navbar-menu .navbar-item:hover {
+  color: #08c8cc; /* Color on hover for menu items */
+  background-color: transparent; /* Ensure no background color on hover */
+}
+
+/* Responsive styles for larger screens */
 @media screen and (min-width: 1024px) {
   .navbar.is-light .navbar-start > .navbar-item,
   .navbar.is-light .navbar-start .navbar-link,
   .navbar.is-light .navbar-end > .navbar-item,
   .navbar.is-light .navbar-end .navbar-link {
     color: rgba(0, 0, 0, 0.7);
+    position: relative; /* Needed for the underline effect */
+    transition: color 0.3s ease, background-color 0.3s ease; /* Smooth color and background transition */
+    background-color: transparent; /* Ensure no background color */
   }
-  .navbar.is-light .navbar-start > a.navbar-item:focus, .navbar.is-light .navbar-start > a.navbar-item:hover, .navbar.is-light .navbar-start > a.navbar-item.is-active,
-  .navbar.is-light .navbar-start .navbar-link:focus,
+
+  /* Text color change on hover and active states */
+  .navbar.is-light .navbar-start > a.navbar-item:hover,
+  .navbar.is-light .navbar-start > a.navbar-item.is-active,
   .navbar.is-light .navbar-start .navbar-link:hover,
   .navbar.is-light .navbar-start .navbar-link.is-active,
-  .navbar.is-light .navbar-end > a.navbar-item:focus,
   .navbar.is-light .navbar-end > a.navbar-item:hover,
   .navbar.is-light .navbar-end > a.navbar-item.is-active,
-  .navbar.is-light .navbar-end .navbar-link:focus,
   .navbar.is-light .navbar-end .navbar-link:hover,
   .navbar.is-light .navbar-end .navbar-link.is-active {
-    background-color: #e8e8e8;
-    color: rgba(0, 0, 0, 0.7);
+    color: #08c8cc;
+    background-color: transparent; /* Ensure no background color on hover */
   }
+
+  /* Underline effect on hover for larger screens */
+  .navbar.is-light .navbar-start > a.navbar-item::after,
   .navbar.is-light .navbar-start .navbar-link::after,
+  .navbar.is-light .navbar-end > a.navbar-item::after,
   .navbar.is-light .navbar-end .navbar-link::after {
-    border-color: rgba(0, 0, 0, 0.7);
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    left: 0;
+    bottom: -3px;
+    background-color: #08c8cc;
+    transition: width 0.3s ease;
   }
+
+  .navbar.is-light .navbar-start > a.navbar-item:hover::after,
+  .navbar.is-light .navbar-start .navbar-link:hover::after,
+  .navbar.is-light .navbar-end > a.navbar-item:hover::after,
+  .navbar.is-light .navbar-end .navbar-link:hover::after {
+    width: 100%;
+  }
+
+  /* Dropdown items */
   .navbar.is-light .navbar-item.has-dropdown:focus .navbar-link,
   .navbar.is-light .navbar-item.has-dropdown:hover .navbar-link,
   .navbar.is-light .navbar-item.has-dropdown.is-active .navbar-link {
-    background-color: #e8e8e8;
     color: rgba(0, 0, 0, 0.7);
   }
+
   .navbar.is-light .navbar-dropdown a.navbar-item.is-active {
-    background-color: whitesmoke;
     color: rgba(0, 0, 0, 0.7);
   }
 }
@@ -6444,6 +6510,7 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
     background-color: #fafafa;
   }
 }
+
 
 .hero.is-fullheight-with-navbar {
   min-height: calc(100vh - 3.25rem);
@@ -8989,11 +9056,11 @@ a.has-text-primary:hover, a.has-text-primary:focus {
 }
 
 .has-text-primary-light {
-  color: #ebfffc !important;
+  color: #08c8cc !important;
 }
 
 a.has-text-primary-light:hover, a.has-text-primary-light:focus {
-  color: #b8fff4 !important;
+  color: #009295 !important;
 }
 
 .has-background-primary-light {
@@ -9001,7 +9068,7 @@ a.has-text-primary-light:hover, a.has-text-primary-light:focus {
 }
 
 .has-text-primary-dark {
-  color: #00947e !important;
+  color: #55455e !important;
 }
 
 a.has-text-primary-dark:hover, a.has-text-primary-dark:focus {
@@ -10448,7 +10515,7 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
 }
 
 .is-family-primary {
-  font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif !important;
+  font-family: "Raleway", "Helvetica Neue", "Helvetica", serif !important;
 }
 
 .is-family-secondary {
@@ -10464,7 +10531,7 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
 }
 
 .is-family-code {
-  font-family: monospace !important;
+  font-family: 'Courier New', monospace !important;
 }
 
 .is-block {
@@ -12015,4 +12082,51 @@ margin-bottom: 0px;
 .active,
 .demo:hover {
   opacity: 1;
+}
+
+.terminal-cursor {
+  display: inline-block;
+  width: 0.5em; /* Adjust width to be a bit wider */
+  height: 1em; /* Match height to the text size */
+  background-color: currentColor; /* Match text color */
+  margin-left: 5px;
+  animation: blink 1s step-end infinite;
+  vertical-align: text-bottom; /* Align the cursor with the bottom of the text */
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.underline-box-light {
+  width: 100px; /* Adjust width to your preference */
+  height: 10px;  /* Thickness of the underline */
+  background-color: #08c8cc; /* Color of the underline */
+  margin: 0 auto 20px auto; /* Centering and space below the underline */
+}
+
+.underline-box-dark {
+  width: 100px; /* Adjust width to your preference */
+  height: 10px;  /* Thickness of the underline */
+  background-color: #55455e; /* Color of the underline */
+  margin: 0 auto 20px auto; /* Centering and space below the underline */
+}
+
+.project-box {
+  background-color: white;
+  border-radius: 6px;
+  box-shadow: 0 0.5em 1em -0.125em rgba(10, 10, 10, 0.1), 0 0px 0 1px rgba(10, 10, 10, 0.02);
+  color: #4a4a4a;
+  display: block;
+  padding: 0;
+}
+
+.project-box img {
+  padding: 0; /* Set padding to 0px specifically for img tags */
+  margin: 0; /* Remove any margin if needed */
+  display: block; /* Remove any extra space below the image */
+  width: 100%; /* Make the image span the full width of its container */
+  height: auto; /* Maintain aspect ratio */
 }

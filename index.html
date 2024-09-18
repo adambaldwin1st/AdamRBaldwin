@@ -1,285 +1,119 @@
 <!DOCTYPE html>
 <html>
+
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adam R. Baldwin</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="bulma.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const burger = document.querySelector('.navbar-burger');
+            const menu = document.querySelector('.navbar-menu');
+            const menuItems = document.querySelectorAll('.navbar-menu .navbar-item');
+
+            // Toggle the menu when the burger is clicked
+            burger.addEventListener('click', () => {
+                burger.classList.toggle('is-active');
+                menu.classList.toggle('is-active');
+            });
+
+            // Close the menu when a menu item is clicked
+            menuItems.forEach(item => {
+                item.addEventListener('click', () => {
+                    if (menu.classList.contains('is-active')) {
+                        burger.classList.remove('is-active');
+                        menu.classList.remove('is-active');
+                    }
+                });
+            });
+        });
+    </script>
 </head>
-<body>
-<nav class="navbar is-light" role="navigation" aria-label="main navigation">
-    <div class="navbar-brand">
-        <a class="navbar-item" href="https://adamrbaldwin.com">
-            <img src="images/ARBLogo.png" alt="Adam R. Baldwin">
-        </a>
-        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-        </a>
-    </div>
-    <div id="navbarBasicExample" class="navbar-menu">
-        <div class="navbar-start">
-            <a class="navbar-item" href="#home">
-                Home
+
+<body class="container is-family-primary">
+<header class="is-family-code has-text-primary-dark has-text-weight-bold">
+    <nav class="navbar has-shadow is-light">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="https://adamrbaldwin.com">
+                <img src="images/ARBLogo.png" alt="Adam R. Baldwin">
             </a>
-            <a class="navbar-item" href="https://www.instagram.com/the_creations_of_adam/">
-                Woodworking
+            <!-- Burger button for mobile view -->
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMenu">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
             </a>
         </div>
-    </div>
-</nav>
-
-<section class="hero is-danger is-fullheight-with-navbar">
-    <div class="mt-6 container hero-header">
-        <img class="mt-6" src="images/name_header.png" style="background-size: cover">
-    </div>
-</section>
-
-<!-- Information section -->
-<section class="hero is-fullheight is-success">
-    <div class="hero-body">
-        <div class="container is-max-desktop">
-            <h1 class="mb-6 title is-1 is-italic has-text-weight-light has-text-centered">My name is Adam Baldwin</h1>
-            <h1 class="subtitle is-4 has-text-weight-light has-text-centered has-text-black is-italic">I am a software developer. Hi!</h1>
-            <hr class="mb-0 thin">
-            <div class="columns mt-4">
-                <div class="column">
-                    <h1 class="has-text-link-dark title is-2 has-text-weight-light">About Me</h1>
-                    <p class="has-text-black is-size-5 has-text-weight-light">I am a versatile software developer with
-                        experience in both web development and local application development. My number one goal is to
-                        consistently deliver work that I am genuinely proud of. I prioritize reliability, consistency,
-                        and effective teamwork to succeed.</p>
-                </div>
-                <div class="column">
-                    <figure class="mt-6 image is-square">
-                        <img src="images/old_profile.png" alt="Profile Picture">
-                    </figure>
-                </div>
-                <div class="column">
-                    <h1 class="has-text-link-dark title is-2 has-text-weight-light">Hobbies</h1>
-                    <p class="has-text-black is-size-5 has-text-weight-light">I find joy in creating things, whether
-                        it's through woodworking, 3D printing, or exploring graphic design. Outside of that, you'll
-                        often find me enjoying a game of soccer or spending quality time with my dog, Rosie.</p>
-                </div>
+        <div id="navbarMenu" class="navbar-menu">
+            <div class="navbar-start">
+                <a class="navbar-item" href="#home">Home</a>
+                <a class="navbar-item" href="#about">About Me</a>
+                <a class="navbar-item" href="#projects">Projects</a>
+                <a class="navbar-item" href="#contact">Contact</a>
             </div>
-            <hr class="mb-0 thin">
         </div>
+    </nav>
+</header>
+
+<section class="section" id="home">
+    <div class="container is-flex has-text-left">
+        <h1 class="title is-top-title is-family-code has-text-primary-dark">> Adam R. Baldwin<span class="terminal-cursor"></span></h1>
     </div>
 </section>
 
-<!-- Experience Section -->
-<section class="hero is-fullheight is-warning">
-    <div class="hero-body">
-        <div class="container is-max-desktop">
-            <h1 class="mb-6 title is-1 is-italic has-text-weight-light has-text-centered">Experiences</h1>
-            <h1 class="subtitle is-5 has-text-weight-light has-text-centered has-text-black">"Experience is the hardest kind of teacher -
-                It gives you the test first and the lesson afterward" - Oscar Wilde</h1>
-            <hr class="mb-0 thin">
-            <div class="columns mt-4">
+<section class="section" id="about">
+    <div class="container is-size-4">
+        <p>I’m a self-taught software developer. I am driven by curiosity and a passion for creating work I can be proud of.</p>
+        <p>Check out my <a href="#projects" class="has-text-primary-light">side projects</a> below!</p>
+    </div>
+</section>
+
+<section class="section" id="projects">
+    <div class="container">
+        <h2 class="title is-2 has-text-centered">Projects</h2>
+        <div class="underline-box-light"></div>
+
+        <div class="project-box">
+            <div class="columns">
+                <div class="column is-one-third">
+                    <img src="images/premier-league-logo-purple-background.png" alt="Project Image">
+                </div>
                 <div class="column">
-                    <h1 class="has-text-link-dark title is-2 mt-5 has-text-weight-light has-text-left">Education</h1>
-                    <div class="columns mt-4">
-                        <div class="column is-one-quarter">
-                            <h1 class="has-text-black title is-4 mb-0 has-text-weight-heavy has-text-left">Virginia Tech</h1>
-                            <br>
-                            <h1 class="has-text-black title is-6 mt-0 has-text-weight-light has-text-left">2016-2022</h1>
-                        </div>
-                        <div class="column">
-                            <h1 class="has-text-black title is-6 mt-0 has-text-weight-heavy">Bachelor's - Industrial and Systems Engineering</h1>
-                            <h1 class="has-text-black title is-6 mt-0 has-text-weight-light">
-                                Industrial and Systems Engineering is not the typical path for software developers. I found that learning
-                                the business side of my future career was equally as important as learning the technical side. The efficiency
-                                optimization and data management aspects contribute directly to my workflow process and help keep me on track.</h1>
-                            <p class="has-text-link">
-                                <i class="fa fa-fw fa-map-marker"></i> Blacksburg, VA
-                            </p>
-                        </div>
+                    <h3 class="title is-4">Project One</h3>
+                    <p>A brief description of the project and its significance. Technologies used: HTML, CSS, JavaScript.</p>
+                    <div class="buttons">
+                        <a href="#" class="button is-primary">Button 1</a>
+                        <a href="#" class="button is-info">Button 2</a>
+                        <a href="#" class="button is-link">Button 3</a>
                     </div>
-                    <hr class="mb-0 thin">
-                    <h1 class="has-text-link-dark title is-2 mt-5 has-text-weight-light has-text-left">Involvement</h1>
-                    <h1 class="has-text-black title is-4 mb-0 has-text-weight-heavy has-text-left">Student Engineers Council</h1>
-                    <div class="columns mt-4">
-                        <div class="column is-one-quarter">
-                            <h1 class="has-text-black title is-6 mt-0 mb-1 has-text-weight-light has-text-left">Publicity Chair</h1>
-                            <h1 class="has-text-black title is-6 mt-0 has-text-weight-light has-text-left">2017-2019</h1>
-                        </div>
-                        <div class="column">
-                            <h1 class="has-text-black title is-6 mt-0 has-text-weight-light">
-                                The Student Engineers Council at Virginia Tech is a group of students that coordinate and run Engineering Expo,
-                                one of the largest student-run career fairs in the country. Additionally, the SEC divides up over $140,000 per
-                                year to various design teams and graduate research projects. As Publicity Chair, I was in charge of advertising
-                                every event hosted by the council, as well as maintaining and updating our public image.</h1>
-                            <p class="has-text-link">
-                                <i class="fa fa-fw fa-map-marker"></i> Blacksburg, VA | <i class="fa fa-fw fa-link"></i> <a class="has-text-link" href="https://www.sec.vt.edu/">www.sec.vt.edu</a></p>
-                            </p>
-                        </div>
-                    </div>
-                    <h1 class="has-text-black title is-4 mb-0 has-text-weight-heavy has-text-left">Omega Alpha Kappa, LLC.</h1>
-                    <div class="columns mt-4">
-                        <div class="column is-one-quarter">
-                            <h1 class="has-text-black title is-6 mt-0 mb-1 has-text-weight-light has-text-left">Vice President</h1>
-                            <h1 class="has-text-black title is-6 mt-0 mb-2 has-text-weight-light has-text-left">2018-2019</h1>
-                            <h1 class="has-text-black title is-6 mt-0 mb-1 mt-0 has-text-weight-light has-text-left">New Member Educator</h1>
-                            <h1 class="has-text-black title is-6 mt-0 has-text-weight-light">2019-2020</h1>
-                        </div>
-                        <div class="column">
-                            <h1 class="has-text-black title is-6 mt-0 has-text-weight-light">
-                                Omega Alpha Kappa is an independent social organization based in Blacksburg, VA. As part of this organization,
-                                I drafted and ratified an entirely new Constitution and Bylaws system. Additionally, I authored the handbook
-                                that is given to each of the new members, as well as building the initial website used by the organization.</h1>
-                            <p class="has-text-link">
-                                <i class="fa fa-fw fa-map-marker"></i> Blacksburg, VA</p>
-                            </p>
-                        </div>
-                    </div>
-                    <hr class="mb-0 thin">
-                    <h1 class="has-text-link-dark title is-2 mt-5 has-text-weight-light has-text-left">Careers</h1>
-                    <h1 class="has-text-black title is-4 mb-0 has-text-weight-heavy has-text-left">Bandwidth Inc.</h1>
-                    <div class="columns mt-4">
-                        <div class="column is-one-quarter">
-                            <h1 class="has-text-black title is-6 mt-0 mb-1 has-text-weight-light has-text-left">Software Developer</h1>
-                            <h1 class="has-text-black title is-6 mt-0 has-text-weight-light has-text-left">2021-Present</h1>
-                        </div>
-                        <div class="column">
-                            <h1 class="has-text-black title is-6 mt-0 has-text-weight-light">
-                                During my time at Bandwidth, I have created a caching database for an API used to send automated text messages.
-                                I helped create a Spring application to run regular jobs that ensured the database was accurate.
-                                I wrote GitHub Actions to automate the deployment of the Spring application and database.
-                                I developed React pages and components that allow the end user to track their current leases and short code information.
-                            </h1>
-                            <p class="has-text-link">
-                                <i class="fa fa-fw fa-map-marker"></i> Raleigh, NC | <i class="fa fa-fw fa-link"></i> <a class="has-text-link" href="https://www.bandwidth.com/">www.bandwidth.com</a></p>
-                            </p>
-                        </div>
-                    </div>
-                    <h1 class="has-text-black title is-4 mb-0 has-text-weight-heavy has-text-left">CapTech Consulting</h1>
-                    <div class="columns mt-4">
-                        <div class="column is-one-quarter">
-                            <h1 class="has-text-black title is-6 mt-0 mb-1 has-text-weight-light has-text-left">Software Developer Intern</h1>
-                            <h1 class="has-text-black title is-6 mt-0 has-text-weight-light has-text-left">2021</h1>
-                        </div>
-                        <div class="column">
-                            <h1 class="has-text-black title is-6 mt-0 has-text-weight-light">
-                                I was part of a 12-person intern team tasked with completing a consulting project over the summer.
-                                The team used Agile methodology to complete our goals, and I took on the role of a back-end developer.
-                                We developed an API using Spring Boot to handle user requests and interface with Amazon image recognition
-                                and the database. This experience solidified my preference for back-end development.</h1>
-                            <p class="has-text-link">
-                                <i class="fa fa-fw fa-map-marker"></i> Richmond, VA (Remote) | <i class="fa fa-fw fa-link"></i> <a class="has-text-link" href="https://www.captechconsulting.com/">www.captechconsulting.com</a></p>
-                            </p>
-                        </div>
-                    </div>
-                    <h1 class="has-text-black title is-4 mb-0 has-text-weight-heavy has-text-left">General Dynamics Information Technology</h1>
-                    <div class="columns mt-4">
-                        <div class="column is-one-quarter">
-                            <h1 class="has-text-black title is-6 mt-0 mb-1 has-text-weight-light has-text-left">Software Developer Intern</h1>
-                            <h1 class="has-text-black title is-6 mt-0 mb-2 has-text-weight-light has-text-left">2019-2021</h1>
-                        </div>
-                        <div class="column">
-                            <h1 class="has-text-black title is-6 mt-0 has-text-weight-light">
-                                I was a member of RAD - Rapid Application Development - at GDIT. My current role was to implement quality of
-                                life changes to our HR portal. This involved weekly meetings with our HR team to update goals for our subcontractors.
-                                The system I worked on used GitHub to collaborate on an application deployed using Grails and predominantly written in
-                                Groovy. At the end of my summer internship, I was allowed to work remotely during the school year.</h1>
-                            <p class="has-text-link">
-                                <i class="fa fa-fw fa-map-marker"></i> Chantilly, VA | <i class="fa fa-fw fa-link"></i> <a class="has-text-link" href="https://www.gdit.com/">www.gdit.com</a></p>
-                            </p>
-                        </div>
-                    </div>
-                    <h1 class="has-text-black title is-4 mb-0 has-text-weight-heavy has-text-left">CSRA Inc.</h1>
-                    <div class="columns mt-4">
-                        <div class="column is-one-quarter">
-                            <h1 class="has-text-black title is-6 mt-0 mb-1 has-text-weight-light has-text-left">AWS Cloud Developer Intern</h1>
-                            <h1 class="has-text-black title is-6 mt-0 mb-2 has-text-weight-light has-text-left">2018</h1>
-                        </div>
-                        <div class="column">
-                            <h1 class="has-text-black title is-6 mt-0 has-text-weight-light">
-                                At CSRA, I was an AWS Cloud Developer Intern on the MilCloud 2.0 project. This project involved migrating deprecated
-                                VMWare virtual machines to a newer KVM virtual machine setup. As part of this, I developed a web-based, lightweight
-                                tool to automate the conversion using shell scripting and Javascript.</h1>
-                            <p class="has-text-link">
-                                <i class="fa fa-fw fa-map-marker"></i> Chantilly, VA | <i class="fa fa-fw fa-link"></i> <a class="has-text-link" href="https://www.gdit.com/">www.csra.com</a></p>
-                            </p>
-                        </div>
-                    </div>
-                    <hr class="mb-0 thin">
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Skills section -->
-<section class="hero is-medium is-link">
-    <div class="hero-body">
-        <div class="container is-max-desktop">
-            <h1 class="mb-6 title is-1 is-italic has-text-weight-light has-text-centered">Skills</h1>
-            <hr class="mb-0 thin">
-            <div class="columns mt-4 has-text-centered">
-                <div class="column">
-                    <p>Java</p>
-                    <br>
-                    <p>Spring Boot</p>
-                    <br>
-                    <p>Typescript</p>
-                </div>
-                <div class="column">
-                    <p>React</p>
-                    <br>
-                    <p>Python</p>
-                    <br>
-                    <p>AWS CDK</p>
-                </div>
-                <div class="column">
-                    <p>Github Actions</p>
-                    <br>
-                    <p>AWS</p>
-                    <br>
-                    <p>HTML/CSS</p>
-                </div>
-            </div>
-            <hr class="mb-0 thin">
-        </div>
+<section class="section" id="contact">
+    <div class="container">
+        <h2 class="title is-2">Contact</h2>
+        <p>Feel free to reach out to me via email or through my LinkedIn profile:</p>
+        <p><a href="mailto:adam@example.com">adam@example.com</a></p>
+        <p><a href="https://www.linkedin.com/in/adamrbaldwin/">LinkedIn</a></p>
     </div>
 </section>
 
-<!-- Contact section -->
-<section class="hero is-small is-info">
-    <div class="hero-body">
-        <div class="container is-max-desktop">
-            <h1 class="mb-6 title is-1 is-italic has-text-weight-light has-text-centered">Contact</h1>
-            <h1 class="subtitle is-5 has-text-weight-light has-text-centered">Please do not hesitate to contact me at any time</h1>
-            <hr class="mb-0 thin-white">
-            <div class="columns mt-4 has-text-centered">
-                <div class="column has-text-weight-light">
-                    <p><i class="fas fa-envelope"></i> <a href="mailto:abaldwinva98@gmail.com" target="_blank">abaldwinva98@gmail.com</a></p>
-                </div>
-                <div class="column has-text-weight-light">
-                    <p><i class="fas fa-phone"></i>(703) 945-2102</p>
-                </div>
-                <div class="column has-text-weight-light">
-                    <p><i class="fab fa-github"></i> <a href="https://github.com/adambaldwin1st" target="_blank">GitHub</a></p>
-                </div>
-            </div>
-
-            <hr class="mb-0 thin-white">
-
-            <p class="has-text-centered has-text-weight-light mt-3">My resume can be found here:</p>
-            <div class="has-text-centered mt-4">
-                <a href="images/BaldwinResume.pdf" download="BaldwinResume">
-                    <button class="button is-info is-large is-rounded"><i class="fa fa-download"></i>Download</button>
-                </a>
-            </div>
-            <div class="has-text-centered has-text-weight-light mt-6">
-                <p>This site was built by Adam Baldwin for Adam Baldwin in collaboration with Adam Baldwin</p>
-            </div>
-        </div>
+<footer class="footer">
+    <div class="content has-text-centered">
+        <p>&copy; 2024 Adam R. Baldwin. All rights reserved.</p>
     </div>
-</section>
-
+</footer>
 
 </body>
+
 </html>
