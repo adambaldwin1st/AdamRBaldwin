@@ -12104,7 +12104,7 @@ margin-bottom: 0px;
   width: 100px; /* Adjust width to your preference */
   height: 10px;  /* Thickness of the underline */
   background-color: #08c8cc; /* Color of the underline */
-  margin: 0 auto 20px auto; /* Centering and space below the underline */
+  margin: 0 auto 5rem;
 }
 
 .underline-box-dark {
@@ -12115,18 +12115,33 @@ margin-bottom: 0px;
 }
 
 .project-box {
-  background-color: white;
-  border-radius: 6px;
-  box-shadow: 0 0.5em 1em -0.125em rgba(10, 10, 10, 0.1), 0 0px 0 1px rgba(10, 10, 10, 0.02);
-  color: #4a4a4a;
-  display: block;
-  padding: 0;
+  display: flex;
+  align-items: stretch;
+  border-radius: 8px; /* Matches the rounded corners */
+  overflow: hidden; /* Ensures the image fits within the box */
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1); /* Optional: add a shadow for better visual separation */
+  margin-bottom: 5rem;
+  height: 300px; /* Set a fixed height for the box */
 }
 
 .project-box img {
-  padding: 0; /* Set padding to 0px specifically for img tags */
-  margin: 0; /* Remove any margin if needed */
-  display: block; /* Remove any extra space below the image */
-  width: 100%; /* Make the image span the full width of its container */
-  height: auto; /* Maintain aspect ratio */
+  flex: 0 0 33.33%; /* Image takes up one-third of the box */
+  height: 100%; /* Make the image fill the full height of the box */
+  width: auto; /* Allow the width to adjust while maintaining the aspect ratio */
+  object-fit: cover; /* Ensures the image scales well within its space */
 }
+
+.project-box .content {
+  flex: 1; /* Content takes up the remaining two-thirds */
+  padding: 1rem; /* Add padding for the content */
+  margin: 0; /* No extra margin around content */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center content vertically */
+}
+
+.project-box .buttons {
+  margin-top: 1rem; /* Space between text and buttons */
+}
+
+
