@@ -174,7 +174,7 @@
         <div class="project-box">
             <div class="columns">
                 <div class="column is is-one-third">
-                    <img src="images/premier-league-logo-purple-background.png" alt="Project Image">
+                    <img src="images/bw_logo.jpg" alt="Project Image">
                 </div>
                 <div class="column is is-two-thirds">
                     <div class="content">
@@ -207,7 +207,7 @@
         <div class="project-box">
             <div class="columns">
                 <div class="column is is-one-third">
-                    <img src="images/buzzed_trivia.png" alt="Project Image">
+                    <img src="images/captech_logo.jpg" alt="Project Image">
                 </div>
                 <div class="column is is-two-thirds">
                     <div class="content">
@@ -239,7 +239,7 @@
         <div class="project-box">
             <div class="columns">
                 <div class="column is is-one-third">
-                    <img src="images/premier-league-logo-purple-background.png" alt="Project Image">
+                    <img src="images/gdit_logo.jpg" alt="Project Image">
                 </div>
                 <div class="column is is-two-thirds">
                     <div class="content">
@@ -275,33 +275,34 @@
 <section class="section" id="contact">
     <h2 class="title is-2 has-text-centered">Contact</h2>
     <div class="underline-box-light"></div>
-    <nav class="level">
+    <nav class="level is-full-mobile">
         <div class="level-item has-text-centered">
-            <div>
-                <p class="heading">abaldwinva98@gmail.com</p>
+            <a id="copy-email">
                 <span class="material-symbols-outlined">mail</span>
-            </div>
+            </a>
         </div>
         <div class="level-item has-text-centered">
-            <div>
-                <p class="heading">Following</p>
-                <p class="title">123</p>
-            </div>
+            <a id="copy-email">
+                <span class="material-symbols-outlined">mail</span>
+            </a>
         </div>
         <div class="level-item has-text-centered">
-            <div>
-                <p class="heading">Followers</p>
-                <p class="title">456K</p>
-            </div>
+            <a id="copy-email">
+                <span class="material-symbols-outlined">mail</span>
+            </a>
         </div>
     </nav>
 </section>
 
 <footer class="footer">
     <div class="content has-text-centered">
-        <p>&copy; 2024 Adam R. Baldwin. All rights reserved.</p>
+        <p>Adam Baldwin &copy; <span id="current-year"></span></p>
     </div>
 </footer>
+
+<script>
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+</script>
 
 </body>
 
