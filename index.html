@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adam R. Baldwin</title>
     <link rel="stylesheet" type="text/css" href="bulma.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://kit.fontawesome.com/dca8c94847.js" crossorigin="anonymous"></script>
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -45,7 +45,6 @@
             <a class="navbar-item" href="https://adamrbaldwin.com">
                 <img src="images/ARBLogo.png" alt="Adam R. Baldwin">
             </a>
-            <!-- Burger button for mobile view -->
             <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMenu">
                 <span aria-hidden="true"></span>
                 <span aria-hidden="true"></span>
@@ -57,7 +56,18 @@
                 <a class="navbar-item" href="#home">Home</a>
                 <a class="navbar-item" href="#about">About Me</a>
                 <a class="navbar-item" href="#projects">Projects</a>
+                <a class="navbar-item" href="#professional-experience">Experience</a>
                 <a class="navbar-item" href="#contact">Contact</a>
+            </div>
+            <div class="navbar-end">
+                <a class="navbar-item" href="images/BaldwinResume.pdf" download="Adam_Baldwin_Resume.pdf">
+                    <span class="icon-text">
+                      <span class="icon">
+                        <i class="fa fa-file"></i>
+                      </span>
+                      <span>Resume</span>
+                    </span>
+                </a>
             </div>
         </div>
     </nav>
@@ -90,14 +100,14 @@
         <h2 class="title is-2 has-text-centered">Projects</h2>
         <div class="underline-box-light"></div>
         <div class="project-box">
-            <div class="columns">
-                <div class="column is is-one-third">
+            <div class="columns is-full-mobile">
+                <div class="column is-one-third is-hidden-mobile">
                     <img src="images/premier-league-logo-purple-background.png" alt="Project Image">
                 </div>
-                <div class="column is is-two-thirds">
+                <div class="column is-two-thirds is-full-mobile">
                     <div class="content">
                         <h3 class="title is-4">FPL Ultimate</h3>
-                        <p>FPLUltimate began as a website that initially scraped data from the
+                        <p>FPL Ultimate began as a website that initially scraped data from the
                             official Fantasy Premier League (FPL) website to present player stats
                             and other relevant information in a more organized and user-friendly
                             way. Eventually, it evolved into a standalone project that is currently
@@ -116,11 +126,11 @@
             </div>
         </div>
         <div class="project-box">
-            <div class="columns">
-                <div class="column is is-one-third">
+            <div class="columns is-full-mobile">
+                <div class="column is-one-third is-hidden-mobile">
                     <img src="images/buzzed_trivia.png" alt="Project Image">
                 </div>
-                <div class="column is is-two-thirds">
+                <div class="column is-two-thirds is-full-mobile">
                     <div class="content">
                         <h3 class="title is-4">Buzzed Trivia</h3>
                         <p>I often create sets of trivia questions to host family trivia nights.
@@ -141,16 +151,17 @@
             </div>
         </div>
         <div class="project-box">
-            <div class="columns">
-                <div class="column is is-one-third">
+            <div class="columns is-full-mobile">
+                <div class="column is-one-third is-hidden-mobile">
                     <img src="images/premier-league-logo-purple-background.png" alt="Project Image">
                 </div>
-                <div class="column is is-two-thirds">
+                <div class="column is-two-thirds is-full-mobile">
                     <div class="content">
                         <h3 class="title is-4">Creation API</h3>
                         <p>The Creation API is the catch-all name I have given to my Raspberry Pi
                             and its associated services. I use it to run regularly scheduled jobs,
-                            interact with my Discord servers, and to control my 3D printers.
+                            interact with my Discord servers, and to control my 3D printers. One day I hope to use
+                            existing services to piece together my own digital assistant.
                             <br><br>
                             The Creation API is the answer to any question that can be solved
                             via programming.</p>
@@ -172,14 +183,15 @@
         <h2 class="title is-2 has-text-centered">Professional Experience</h2>
         <div class="underline-box-light"></div>
         <div class="project-box">
-            <div class="columns">
-                <div class="column is is-one-third">
+            <div class="columns is-full-mobile">
+                <div class="column is-one-third is-hidden-mobile">
                     <img src="images/bw_logo.jpg" alt="Project Image">
                 </div>
-                <div class="column is is-two-thirds">
+                <div class="column is-two-thirds is-full-mobile">
                     <div class="content">
                         <p class="title is-4">Bandwidth Inc.</p>
-                        <p class="subtitle is-6">Software Developer II</p>
+                        <p class="subtitle is-6 is-italic">Software Developer I -- Jun. 2022 - Oct. 2024
+                        <br>Software Developer II -- Oct. 2024 - Present</p>
                         <p>Bandwidth hired me as an intern during my final year in college.
                             I was put on a team that was developing an experimental video chat
                             application using WebRTC. This was a pivotal opportunity in my career
@@ -205,14 +217,14 @@
             </div>
         </div>
         <div class="project-box">
-            <div class="columns">
-                <div class="column is is-one-third">
+            <div class="columns is-full-mobile">
+                <div class="column is-one-third is-hidden-mobile">
                     <img src="images/captech_logo.jpg" alt="Project Image">
                 </div>
-                <div class="column is is-two-thirds">
+                <div class="column is-two-thirds is-full-mobile">
                     <div class="content">
                         <p class="title is-4">CapTech Consulting</p>
-                        <p class="subtitle is-6">Software Development Intern</p>
+                        <p class="subtitle is-6 is-italic">Software Development Intern -- Summer 2021</p>
                         <p>I joined CapTech Consulting as an intern for the Summer of 2021. I was
                             placed on a team with 11 other interns and tasked with creating a
                             web-based application. The application's purpose was to track items in
@@ -237,32 +249,68 @@
             </div>
         </div>
         <div class="project-box">
-            <div class="columns">
-                <div class="column is is-one-third">
+            <div class="columns is-full-mobile">
+                <div class="column is-one-third is-hidden-mobile">
                     <img src="images/gdit_logo.jpg" alt="Project Image">
                 </div>
-                <div class="column is is-two-thirds">
+                <div class="column is-two-thirds is-full-mobile">
                     <div class="content">
                         <p class="title is-4">General Dynamics Information Technology</p>
-                        <p class="subtitle is-6">Software Development and AWS Intern</p>
-                        <p>I joined CapTech Consulting as an intern for the Summer of 2021. I was
-                            placed on a team with 11 other interns and tasked with creating a
-                            web-based application. The application's purpose was to track items in
-                            a user's pantry and fridge and make suggestions for recipes based on
-                            what is available. The CapTech intern program team did a fantastic job
-                            of simulating a real-world consulting environment for creating the
-                            application. I took charge of the API layer of the application to
-                            interface with the frontend, the database, and the external image
-                            recognition software that we utilized. Additionally, I configured the
-                            EC2 that our application was hosted on.
+                        <p class="subtitle is-6 is-italic">Software Development and AWS Intern -- Summer 2018
+                            <br>Software Development Intern -- Summer 2019
+                        </p>
+                        <p>My very first software development job was an internship at a company called CSRA. By the
+                            time I started, CSRA had been acquired by GDIT. As part of that internship, I gained my
+                            first experience with AWS. I worked with the other interns to create a web-based application
+                            for converting VMWare virtual machines to KVM virtual machines for internal use.
                             <br><br>
-                            My experience at CapTech was invaluable. I learned countless
-                            professional development tips during my time there, and am very glad
-                            to have been a part of such a great intern program.</p>
+                            During my time at GDIT, I was assigned a mentor. My mentor was a wealth of professional
+                            advice. She went above and beyond by securing me a subsequent internship in her department,
+                            Rapid Application Development, for the following summer. During my time with RAD, I
+                            overhauled the frontend portion of a portal used by GDIT’s subcontractors to track their
+                            employee certifications. As part of this, I had to make modifications to the underlying SQL
+                            database that stored the information.
+                            <br><br>
+                            My time at GDIT was easily my most formative time as a software developer, and I owe much
+                            of my success to the people generous enough to help me along the way.</p>
                         <div class="buttons">
-                            <a class="button is-success">Java</a>
-                            <a class="button is-info">Spring</a>
-                            <a class="button is-link">React</a>
+                            <a class="button is-success">HTML</a>
+                            <a class="button is-info">PHP</a>
+                            <a class="button is-link">SQL</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="underline-box-light"></div>
+        <div class="project-box">
+            <div class="columns is-full-mobile">
+                <div class="column is-one-third is-hidden-mobile">
+                    <img src="images/sec_logo.jpg" alt="Project Image">
+                </div>
+                <div class="column is-two-thirds is-full-mobile">
+                    <div class="content">
+                        <p class="title is-4">Student Engineers' Council at Virginia Tech</p>
+                        <p class="subtitle is-6 is-italic">Publicity Chair -- May 2017 - May 2019</p>
+                        <p>I joined the Student Engineers’ Council at the end of my freshman year at Virginia Tech.
+                            I joined as the Publicity Chair, which meant I was in charge of advertising every event
+                            hosted by the council, managing the social media presence, and creating any and all graphics
+                            or art related to the SEC.
+                            <br><br>
+                            However, the majority of my responsibilities came from the responsibilities of the council
+                            as a whole. Most notably, the Student Engineers’ Council hosts Engineering Expo, the
+                            engineering job fair at Virginia Tech. During my time with the council, this was the largest
+                            student-run engineering career fair in the country. On top of that, the SEC was in charge of
+                            dividing up $140,000 per year to design teams, engineering organizations, and the
+                            engineering faculty.
+                            <br><br>
+                            My time with the council was a nonstop combination of fun and challenging, and I am very
+                            thankful for the opportunity to have contributed. While not technically a job, I owe a great
+                        deal of my professional development to the SEC.</p>
+                        <div class="buttons">
+                            <a class="button is-success">Professional Development</a>
+                            <a class="button is-info">Resume Building</a>
+                            <a class="button is-link">Networking</a>
                         </div>
                     </div>
                 </div>
@@ -275,26 +323,41 @@
 <section class="section" id="contact">
     <h2 class="title is-2 has-text-centered">Contact</h2>
     <div class="underline-box-light"></div>
-    <nav class="level is-full-mobile">
-        <div class="level-item has-text-centered">
-            <a id="copy-email">
-                <span class="material-symbols-outlined">mail</span>
+    <div class="columns is-centered is-desktop">
+        <div class="column has-text-centered is-full-mobile">
+            <a href="mailto:abaldwinva98@gmail.com" class="has-text-primary-dark">
+                <span class="icon-text">
+              <span class="icon">
+                <i class="fas fa-envelope"></i>
+              </span>
+              <span>abaldwinva98@gmail.com</span>
+            </span>
             </a>
         </div>
-        <div class="level-item has-text-centered">
-            <a id="copy-email">
-                <span class="material-symbols-outlined">mail</span>
+        <div class="column has-text-centered is-full-mobile">
+            <a href="https://github.com/adambaldwin1st" class="has-text-primary-dark">
+                <span class="icon-text">
+              <span class="icon">
+                <i class="fab fa-github"></i>
+              </span>
+              <span>adambaldwin1st</span>
+            </span>
             </a>
         </div>
-        <div class="level-item has-text-centered">
-            <a id="copy-email">
-                <span class="material-symbols-outlined">mail</span>
+        <div class="column has-text-centered is-full-mobile">
+            <a href="https://www.instagram.com/the_creations_of_adam/" class="has-text-primary-dark">
+                <span class="icon-text">
+              <span class="icon">
+                <i class="fab fa-instagram"></i>
+              </span>
+              <span>the_creations_of_adam</span>
+            </span>
             </a>
         </div>
-    </nav>
+    </div>
 </section>
-
-<footer class="footer">
+<hr>
+<footer class="footer mt-6">
     <div class="content has-text-centered">
         <p>Adam Baldwin &copy; <span id="current-year"></span></p>
     </div>
